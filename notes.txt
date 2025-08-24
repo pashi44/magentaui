@@ -1,0 +1,26 @@
+   <!-- interpolation  -->
+  <p>{{ MyName }}</p>
+
+
+  <!-- property binding -->
+  <p  [innerText]="(MyName +  '\t asdasda').toUpperCase()"></p>
+
+
+
+@directives 
+  directives are  used  to  change teh  apperance and behaviour of DOM elements
+  directives  can implemet  al  lifecycle hools
+directives cannot have templates   type
+  types od directives 
+a)  structural  //can be costly  in  clock  cycles , they  re-render
+b)attribute directives
+
+
+
+//structural  attributes acan be used to  hide the dom nodes when needed .  for example
+
+//starts with *ngif
+
+
+
+

@@ -1,0 +1,25 @@
+<div>
+
+    <!-- interpolation  -->
+  <p>{{ MyName }}</p>
+
+
+  <!-- property binding -->
+  <p  [innerText]="(MyName +  '\t asdasda').toUpperCase()"></p>
+  
+  <!---  event binding-->
+  <div  id="interface">
+      
+
+    <tr  *ngIf="zomatoObject.C0 != 0">
+
+<td> {{  zomatoObject .C0}}</td>
+
+<td> {{  zomatoObject .Country }}</td>
+<td> {{  zomatoObject.Region}}</td>
+
+    </tr>
+      
+</div>
+<button    (click)="toggle()" >  toggle </button>
+</div>

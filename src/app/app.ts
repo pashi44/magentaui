@@ -1,12 +1,19 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal , OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Zomato } from './zomato/zomato';
 
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet],
+  selector: 'magenta-root',               
+  standalone  : true,
+  imports: [RouterOutlet, Zomato],      
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']               
 })
-export class App {
-  protected readonly title = signal('Magenta');
+export class App implements  OnInit {
+  readonly title = signal('Magenta');
+
+  ngOnInit(): void {
+      
+  }
+
 }
