@@ -3,7 +3,19 @@
 <p>
   <marquee>  this  summer  gona hurt  like a mofo</marquee>
 </p>
+<!-- 
+
+ $vent param is fixed-->
 
 
-<magenta-zomato ></magenta-zomato>
+
+<magenta-zomato 
+  [restaurantName]="'Dominos Pizza'" 
+
+
+  
+
+  (orderPlaced)="handleOrder($event)">
+</magenta-zomato>
+
 </div>

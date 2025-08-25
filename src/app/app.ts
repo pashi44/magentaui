@@ -12,6 +12,15 @@ import { Zomato } from './zomato/zomato';
 export class App implements  OnInit {
   readonly title = signal('Magenta');
 
+handleOrder(message :string){
+
+  console.log("Parent received:", message);
+    alert(message);
+
+  
+}
+
+
   ngOnInit(): void {
       
   }

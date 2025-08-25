@@ -22,5 +22,31 @@ b)attribute directives
 //starts with *ngif
 
 
+Hooks lifecycle 
+
+
+@eoutput directive is a  event emitter  class , it alwasy 
+has to split the event o parent calass
+
+
+
+a) ngoninit:  works liek  sate altering after  teh component is  mounted and 
+working has ot be done once the cosntrutir is called
+
+
+b)changeDetection:
+
+//    changeDetection  : ChangeDetectionStrategy.Default,
+ dom
+ this property  states when we go  with  onPush ;  the dom  compomenst should
+ meet  certain constraints.
+
+//  in this  mode the binding compomemts should be immutability  . in order to
+  make changes ,
+//seccond  -constarint : the component using hs startegy should not chane the 
+data that  it holds, the 
+
+c)  onchange :  this  hook licycle works on  the component that hasn input
+  decorator
 
 

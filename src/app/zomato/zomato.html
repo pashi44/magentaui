@@ -8,18 +8,30 @@
   <p  [innerText]="(MyName +  '\t asdasda').toUpperCase()"></p>
   
   <!---  event binding-->
-  <div  id="interface">
+
+
+  <div  id="interface"  class="text-primary fs-2">
       
-
-    <tr  *ngIf="zomatoObject.C0 != 0">
-
-<td> {{  zomatoObject .C0}}</td>
-
-<td> {{  zomatoObject .Country }}</td>
-<td> {{  zomatoObject.Region}}</td>
-
-    </tr>
+  <table    class="fs-6" >
+    <thead>
+      <tr>
+        <th>C0</th>
+        <th>Country</th>
+        <th>Region</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let z of zomatoObjectList">
+        <td>{{ z.C0 }}</td>
+        <td>{{ z.Country }}</td>
+        <td>{{ z.Region }}</td>
+      </tr>
+    </tbody>
+  </table>
       
 </div>
+
+
+
 <button    (click)="toggle()" >  toggle </button>
 </div>
