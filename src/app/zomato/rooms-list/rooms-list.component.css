@@ -1,0 +1,30 @@
+.even{
+
+background-color: brown;
+}
+
+.odd{
+
+  background-color: aquamarine;
+}
+
+.highlight{
+
+
+  background-color: cornflowerblue;
+}
+
+
+.normal{
+
+  background-color: darkred;
+}
+
+
+.wrapper{
+
+
+
+  /* display:  flex; */
+
+}

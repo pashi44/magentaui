@@ -1,0 +1,38 @@
+
+<!-- roomListComponent.html-->
+
+<div *ngIf="rooms.length > 0; else noRooms"
+  class="  wrapper d-flex flex-column mt-2  align-items-center">
+  <p>{{    title }}</p>
+  <div
+    *ngFor="let room of rooms; let i = index"
+    [ngClass]="{ 'highlight': i % 2 === 0, 'normal': i % 2 !== 0 }"
+    class="card mb-3 text-center"
+    style="max-width: 600px" >
+
+    <div class="card-body">
+      <p class="mb-1"><strong>Row:</strong> {{ i }}</p>
+      <p class="mb-1"><strong>Room Type:</strong> {{ room.roomType }}</p>
+      <p class="mb-1"><strong>Amenities:</strong> {{ room.amentities }}</p>
+      <p class="mb-1"><strong>Price:</strong> {{ room.price | currency:'INR' }}</p>
+      <p class="mb-1"><strong>Check In:</strong> {{ room.checkInTime }}</p>
+      <p class="mb-1"><strong>Check Out:</strong> {{ room.checkOutTime }}</p>
+
+      <div class="d-flex justify-content-center gap-2 mt-2">
+        <button class="btn btn-danger btn-sm"
+
+  (click)="addToContainer(room,  $event)"
+
+        >Push</button>
+        <button class="btn btn-secondary btn-sm"
+       (click)="popFromContainer(room, $event)"
+
+        >Pop</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #noRooms>
+  <p class="text-muted">No rooms available right now.</p>
+</ng-template>

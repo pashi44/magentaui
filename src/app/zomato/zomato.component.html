@@ -1,0 +1,51 @@
+
+<!-- Zomatocomponent.html-->
+<div class="-flex flex-column align-items-center text-center"
+ *ngIf="!hideobject;   else noObject "   >
+  <p>{{ emp1.name }}</p>
+  <p>{{ emp1.age }}</p>
+</div>
+
+
+
+
+<!-- Center the button -->
+<div class="d-flex justify-content-center mt-3">
+  <input
+    class="btn btn-primary"
+    type="button"
+    value="toggle  the object"
+    (click)="toggle($event)"
+  />
+</div>
+
+
+
+<!-- else made a refe to norooms   template refernce
+and this refernce can o nly be refe red by  ng-template followd by #referncename >
+
+-->
+<!-- (selectedRoom)="add($event)" -->
+<room-list [rooms]="roomsContainer"
+
+(selectedRoom)="add($event)"
+
+[title]="set_title"
+
+>
+
+</room-list>
+<!--  selectedroom is eventemiter object that we have subscribed fromteh dumcompnete roomlist
+and assignignto our smart component with fucntionname that  belonsg to  outr local component
+named add
+
+-->
+
+<viewchild-header >  </viewchild-header>
+
+
+<ng-template
+#noObject
+>
+<p>   </p>
+</ng-template>
